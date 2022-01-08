@@ -1,9 +1,4 @@
----
-framework: "mocha"
-blocklist:
-  - "test/agenda.js##unique##should demonstrate unique contraint##should modify one job when unique matches"
-  - "test/find-and-lock-next-job.js##find-and-lock-next-job##should find jobs without lockedAt property"
-  - "test/find-and-lock-next-job.js##find-and-lock-next-job##should find and rerun stuck jobs (with long ago lockedAt property)"
+framework: mocha
 postMerge:
   pattern:
     - "./test/*.js"
@@ -11,7 +6,9 @@ preMerge:
   pattern:
     - "./test/*.js"
 preRun:
-  - npm install
+     command:
+        - npm install
 postRun:
-  - node --version
-version: 2.1
+     command:
+        - node --version
+version: 1.0

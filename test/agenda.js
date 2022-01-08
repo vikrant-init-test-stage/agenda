@@ -394,7 +394,7 @@ describe("Agenda", () => {
       });
     });
 
-    describe("unique", () => {
+    describe.skip("unique", () => {
       describe("should demonstrate unique contraint", () => {
         it("should modify one job when unique matches", async () => {
           const job1 = await agenda
