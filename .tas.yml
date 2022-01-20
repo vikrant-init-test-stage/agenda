@@ -1,5 +1,4 @@
 framework: mocha
-tier: large
 postMerge:
   pattern:
     - "./test/*.js"
@@ -17,5 +16,4 @@ preRun:
 postRun:
      command:
         - yarn --version
-configFile: "mocharc.yml"
 version: 1.0
