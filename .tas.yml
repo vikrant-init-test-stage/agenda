@@ -3,13 +3,18 @@ tier: large
 postMerge:
   pattern:
     - "./test/*.js"
+  env:
+    CI: true
 preMerge:
   pattern:
     - "./test/*.js"
+  env:
+    CI: true
 preRun:
      command:
-        - npm install
+        - yarn install
 postRun:
      command:
-        - node --version
+        - yarn --version
+configFile: "mocharc.yml"
 version: 1.0
