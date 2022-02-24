@@ -1,18 +1,15 @@
+---
 framework: mocha
-postMerge:
-  pattern:
-    - "./test/*.js"
-  env:
-    CI: true
-preMerge:
-  pattern:
-    - "./test/*.js"
-  env:
-    CI: true
 preRun:
      command:
         - yarn install
-        - yarn build
+        - yarn run pretest
+preMerge:
+  pattern:
+    - "./test/*.js"
+postMerge:
+  pattern:
+    - "./test/*.js"
 postRun:
      command:
         - yarn --version
