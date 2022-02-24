@@ -3,11 +3,15 @@ framework: mocha
 preRun:
      command:
         - yarn install
-        - yarn run pretest
+        - yarn run build
 preMerge:
+  env:
+    USE_MONGODB: true
   pattern:
     - "./test/agenda.js"
 postMerge:
+  env:
+    USE_MONGODB: true
   pattern:
     - "./test/agenda.js"
 postRun:
