@@ -6,10 +6,10 @@ preRun:
         - yarn run pretest
 preMerge:
   pattern:
-    - "./test/*.js"
+    - "./test/agenda.js"
 postMerge:
   pattern:
-    - "./test/*.js"
+    - "./test/agenda.js"
 postRun:
      command:
         - yarn --version
