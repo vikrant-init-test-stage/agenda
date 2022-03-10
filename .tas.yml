@@ -2,6 +2,7 @@
 framework: mocha
 preRun:
      command:
+        - apt-get install gnupg
         - yarn install
         - yarn run build
 preMerge:
